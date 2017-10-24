@@ -1,0 +1,56 @@
+VMAIN pseudocode
+
+Prompt user to select all blocks wired together
+
+If set has a main
+	Create list for panel connections
+	
+	
+	Connect main to nearest panel component [4ft saftey factor]
+	Remove panel components from list of panel components
+		Connect to next nearest panel component [4ft saftey factor]
+		Remove panel components from list of panel components
+	
+	
+	Loop to connect main to 3 closest secondaries
+		Remove secondary from list of secondaries
+		connect secondary to nearest panel component [4ft saftey factor]
+		Remove panel components from list of panel components
+			connect to next nearest panel component [4ft saftey factor]
+			Remove panel components from list of panel components
+
+	Loop to connect each secondary to closest secondary
+		Remove secondary from list of secondaries
+		connect secondary to nearest panel component [4ft saftey factor]
+		Remove panel components from list of panel components
+			connect to next nearest panel component [4ft saftey factor]
+			Remove panel components from list of panel components
+	
+	Connect main to closest aux
+	Remove aux from list for panel connections
+		connect aux to nearest panel component [4ft saftey factor]
+		Remove panel components from list of panel components
+			connect to next nearest panel component [4ft saftey factor]	
+			Remove panel components from list of panel components
+
+
+	Loop to connect aux to next closest aux
+		Remove aux from list for panel connections
+		connect aux to nearest panel component [4ft saftey factor]
+		Remove panel components from list of panel components
+			connect to next nearest panel component [4ft saftey factor]	
+			Remove panel components from list of panel components
+	
+	
+Else set doesn't have main
+	Create list for panel connections
+	
+	Loop to connect aux to next closest aux
+		Remove aux from list for panel connections
+		connect aux to nearest panel component [4ft saftey factor]
+		Remove panel components from list of panel components
+			connect to next nearest panel component [4ft saftey factor]	
+			Remove panel components from list of panel components
+			
+			
+recalculate index function after removale
