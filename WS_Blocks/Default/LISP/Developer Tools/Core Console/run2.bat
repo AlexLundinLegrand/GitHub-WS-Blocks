@@ -1,0 +1,1 @@
+"C:\Program Files\Autodesk\AutoCAD 2016\accoreconsole.exe"  /i C:\WS_Blocks\Default\Templates\RD-DLM.dwg /s "C:\Users\Alex\Desktop\RiserLayout\code.scr"

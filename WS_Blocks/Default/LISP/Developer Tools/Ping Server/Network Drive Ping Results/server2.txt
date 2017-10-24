@@ -1,0 +1,1 @@
+Reply from 10.182.70.24: bytes=32 time<1ms TTL=124 

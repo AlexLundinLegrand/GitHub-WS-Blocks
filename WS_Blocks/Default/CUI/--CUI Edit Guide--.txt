@@ -1,0 +1,51 @@
+--Alex Lundin
+--6/13/2017
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+--Header for all readme files.
+--These following notes appear in all readmes for managing AutoCAD at Legrand, Wattstopper.
+--This article explains the Philosophy of CUI's and AutoCAD more in depth.
+--http://forums.augi.com/showthread.php?18955-Notes-on-the-philosophy-of-CUI&highlight=philosophy
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+--Header for all Edit's
+--
+--It's recommended that only one person makes changes to these files here because they are defaults for all customers:
+--C:\WS_Blocks
+--It's recommended that each customer is allowed to make changes here:
+--C:\WS_Blocks_Customizations
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+--Header for CUI Edit's
+--Before you make any edits to CUI files you'll need to understand four concepts:
+--
+--1.) The difference between a main customization file and a enterprise customization file.
+--CUI stands for Custom User Interface, so these files contain everything needed to add functionality to the AutoCAD customer Interface.
+--There are many types of settings that can be changed inside of a cui file.
+--Most important are workspaces and toolbars.
+--You can create a cui file with as few or as many edits as you like and then load them into a bigger cui file.
+--In some cases, after you load whatever is in the smaller cui into the larger cui, the smaller file is no longer needed (such as workspaces and toolbars).
+--The advantage with making several files that work together in unison is portability and longevity.
+--Also, AutoCAD can support multiple office locations which may have individual needs based on certains settings.
+--Grouping common items in separate cui files (such as toolbars and workspaces in their own files) makeS swapping them out inside the main cui file easier.
+--Keeping the main cui file definition as empty and clean as possible is best.
+--Also using a created cui file as the main file is better than using the default one for AutoCAD.
+--This way the default AutoCAD Main cui (ACAD.cuix) will not get contaminated.
+--That file mentioned above is stored inside the support structure that is standard to AutoCAD.
+--
+--2.) What a cui file is and what can be contained inside of one.
+--Main customization files are unprotected inside of CAD and can be changed at anytime.
+--Main serves as a great location for a clean cui file so the customers can change it as they need to on a individual basis.
+--Main works best when it is used as a space to load standard functionality while giving the customer flexibility to move items.
+--Enterprise customization files are read-only inside of CAD.
+--Enterprise serves as a great location for anything that needs to be standard and locked in place across all customers machines.
+--Enterprise items cannot be moved or edited at any point.
+--Every cui file has the potential to be loaded in either slot, main or enterprise.
+--
+--3.) The support paths under options inside of AutoCAD determine what is a main cui and what is a enterprise cui.
+--The LISP routines set how each cui file is loaded.
+--The acadoptions.lsp file sets all options file paths for each AutoCAD session.
+--C:\WS_Blocks\LISP\acadoptions.lsp
+--
+--4.) It is possible to edit an enterprise cui file. You just have to change it to be loaded as a main cui.
+--To edit the Enterprise Customization file, Wattstopper.cuix, first you must load it into the main slot.
+--From there you can make changes, save it, then switch it back to the enterprise slot to protect it.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,23 @@
+--Author
+--XX/XX/XXXX
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+--Headers for required items.
+--
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Information about the files stored in this folder:
+
+filename.extension
+Short description of file.
+Contents:
+-1
+-2
+-3
+
+filename.extension
+Short description of file.
+Contents:
+-1
+-2
+-3
+

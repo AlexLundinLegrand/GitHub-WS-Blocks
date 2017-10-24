@@ -1,0 +1,76 @@
+
+Only 1 responsibility for Application Engineers:
+
+1.)		Make sure to use VMAIN and then VCONTROLLER, in that order, for any devices you want to wire
+		(first) VMAIN
+		(second) VCONTROLLER
+		Rememeber to always use VMAIN first, it resets data inside the blocks that VCONTROLLER uses.
+		This is especially important on revisions.
+		Anyime you increase the number of Main panels and then redistribute the Secondary, Auxiliary and Station Bus connections it's required to use:
+		VMAIN followed by VCONTROLLER so the data is valid.
+		
+Rules coded into VMAIN function:
+		
+Enclosure Connections
+	Main to Main
+		Wire								Controller Bus
+		Max number of runs						1 Controller Bus run, 1 connnection in and out of each main panel
+		Max quantity of devices per run					31 Main Enclosures, a main enclosure has exactly 1 IC-36 or IC-24 processor in it
+		Max wire distance per run					2000 feet total wire distance on run
+		Max wire distance between devices on run			no limit, other than above condition
+		
+		
+	Main to Secondary
+		Wire								Enclosure Bus
+		Max number of runs						3 Enclosure Bus runs from each Main
+		Max quantity of devices per run					2 Secondaries per Enclosure Bus run
+		Max quantity of devices						6 Secondaries total from any Main
+		Max wire distance per run					200 feet total wire distance on run
+		Max wire distance between devices on run			no limit, other than above condition
+		
+	Main to Auxiliary (used to send data into block)
+		Wire								N/A, connection shown for Application Engineer only
+		Max number of runs						N/A, connection shown for Application Engineer only
+		Max quantity of devices per run					N/A, connection shown for Application Engineer only
+		Max quantity of devices						N/A, connection shown for Application Engineer only
+		Max wire distance per run					N/A, connection shown for Application Engineer only
+		Max wire distance between devices on run			2666 feet between Auxiliary and Main
+		
+	Panel to Component (used to send data into block)
+		Wire								N/A, connection shown for Application Engineer only
+		Max number of runs						N/A, connection shown for Application Engineer only
+		Max quantity of devices per run					N/A, connection shown for Application Engineer only
+		Max quantity of devices						Panel specific (code will determine max number of modules, LVOS, and Controllers)
+		Max wire distance per run					N/A, connection shown for Application Engineer only
+		Max wire distance between devices on run			6 feet, to ensure panel doesn't wire to a component in another room
+			
+Station Connections	
+
+	Controller to Station Bus device
+		Wire								Station Bus
+		Max number of runs						Controller specific (the code will determine)
+		Max quantity of devices per run					Controller specific (the code will determine)
+		Max quantity of devices						no limit, other than above condition
+		Max wire distance per run					Controller specific (the code will determine)
+		Max wire distance between devices on run			no limit, other than above condition
+		
+	Station Bus device to Station Bus device
+		Wire								Station Bus
+		Max quantity of devices per run					Controller specific (the code will determine)
+		Max wire distance per run					Controller specific (the code will determine)
+		Max wire distance between devices on run			no limit, other than above condition
+		
+Controller Specifications
+	IC-36
+	IC-24
+		Max number of station bus runs					2
+		Max quantity of devices per run					60 stations
+		Max quantity of EQ40TB-TI per run				18 EQ40TB-TI
+		Max wire distance per station bus run				2000 feet
+		Max wire distance between devices				1000 feet
+	DIN-LITE-II
+		Max number of station bus runs					1
+		Max quantity of devices per run					20 stations
+		Max quantity of EQ40TB-TI per run				15 EQ40TB-TI
+		Max wire distance per station bus run				1000 feet
+		Max wire distance between devices				500 feet

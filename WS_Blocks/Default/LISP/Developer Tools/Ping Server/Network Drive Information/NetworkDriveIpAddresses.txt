@@ -1,0 +1,3 @@
+Server:  rootdc12.utdallas.edu
+Address:  10.182.70.24
+

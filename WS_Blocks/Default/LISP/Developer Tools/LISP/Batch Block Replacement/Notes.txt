@@ -1,0 +1,6 @@
+Resource for batch block replacement with excel sheet
+https://forums.autodesk.com/t5/autocad-forum/batch-block-replace-with-spreadsheet/td-p/6795231
+
+Resource for reading excel file in AutoCAD
+
+Resource for creating script from excel file

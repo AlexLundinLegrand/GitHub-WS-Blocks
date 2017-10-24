@@ -1,0 +1,65 @@
+(defun string-formatter (string / CHARACTER CMAX CNTR FORMATCHECK STRING1 STRING2 STRING2CNTR STRINGCNTR formattedstring)
+;;;	arguments:
+;;;  	string, sent in from call
+
+  	(setq formatcheck 0)
+  	(setq string(strcase string))             														;sets string to uppercase
+	(setq cntr 0)
+  	(setq cmax (strlen string))																;sets cmax to length of string passed into function
+  
+  	(while 	(< cntr cmax)
+	  	(setq stringcntr (+ 1 cntr))															;strings start at 1, so the stringcntr is 1 more than the loop cntr
+	  	(setq string2cntr (+ 2 cntr))															;this string2cntr is used for the second half of the word
+  		(setq character (substr string stringcntr 1))													;store character to variable
+	  
+
+;;;	  	if and structure to allow for multiple conditions
+;;;	  	progn loop must follow the and portion to wrap all statements together
+	  	(if
+			(AND	
+				(= character " ")(= stringcntr cmax)												;if we are at the end of the string and there is a blank space
+			)
+		  	(progn
+			(setq character "")															;set character to nothing, which removes the space
+			(setq formatcheck 1)
+			)
+		)
+	  
+		(if
+			(AND	(/= character "A")(/= character "B")(/= character "C")(/= character "D")(/= character "E")(/= character "F")
+				(/= character "G")(/= character "H")(/= character "I")(/= character "J")(/= character "K")(/= character "L")
+				(/= character "M")(/= character "N")(/= character "O")(/= character "P")(/= character "Q")(/= character "R")
+				(/= character "S")(/= character "T")(/= character "U")(/= character "V")(/= character "W")(/= character "X")
+				(/= character "Y")(/= character "Z")(/= character "1")(/= character "2")(/= character "3")(/= character "4")
+				(/= character "5")(/= character "6")(/= character "7")(/= character "8")(/= character "9")(/= character "0")
+				(/= character "_")(/= character "")
+			)
+		  	(progn
+			(setq character "_")															;if string is not any of the declared values, then set character to _
+			(setq formatcheck 1)
+			)
+		)
+	  
+
+;;;string1 and string2 are not used for anything but might be useful for other functions
+	  	(cond
+
+		  	((= cntr 0)																;when cntr is 0
+	  		(setq string1 nil)															;there is no string1
+			(setq string2 (substr string string2cntr cmax))												;string2 is the rest of the string after the character
+			(setq formattedstring (strcat character))												;the formated string only has the character value
+			)
+			
+		  	((/= cntr 0)																;when cntr is not 0
+	  		(setq string1 (substr string 1 stringcntr))												;string1 is the portion of the string before the character
+			(setq string2 (substr string string2cntr cmax))												;string2 is the portion of the string after the character
+			(setq formattedstring (strcat  formattedstring character))										;formattedstring is the previous formatted string plus the new character
+			)
+		)	  
+	  	
+	  	(setq cntr (+ 1 cntr))
+	)
+
+  	(setq returnString formattedstring )
+
+  )

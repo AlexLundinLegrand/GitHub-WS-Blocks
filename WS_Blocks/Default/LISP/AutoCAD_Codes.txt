@@ -1,0 +1,108 @@
+Information about WS_Blocks folder structure
+There are 3 root folders:
+
+C:\WS_Blocks\Autosaves
+C:\WS_Blocks\Custom
+C:\WS_Blocks\Default
+
+Location of Standard Work, Room Details Index and Room Details Template:
+C:\WS_Blocks\Default\CAD Documentation\Standard Work
+C:\WS_Blocks\Default\CAD Documentation\Standard Work\Room Detail Index.xls
+C:\WS_Blocks\Default\Templates\RD-DLM.dwg
+
+Locaton of Setup Documents:
+C:\WS_Blocks\Default\CAD Documentation\AutoCAD Setup Documents
+
+Locations of Tool Palette Groups for importing:
+C:\WS_Blocks\Default\ToolPallete\Palettes
+Default Palette Group.xpg
+C:\WS_Blocks\Custom\ToolPallete\Palettes
+Custom Palette Group.xpg
+
+Locations of drawing Templates:
+C:\WS_Blocks\Default\Templates
+
+Information about network drive locations.
+Only copy the WS_Blocks folder from these two locations:
+H:\Drawings
+P:\1 AutoCAD Main
+
+You can also use the windows batch processes to get enhancments quickly
+Close AutoCAD and then copy one of these locations into windows explorer
+H:\Drawings\WS_Blocks_Weekly.bat
+P:\Drawings\WS_Blocks_Weekly.bat
+
+Information about LISP commands
+039.............Run from Paper Space -- Scale paper space key blocks by .039
+AUTOB...........Fill out SEGEMENT and POSITION attributes on networking blocks based on cable run
+AUTOB2..........Move all blocks back to default layers after AUTOB, restore WS-LAYOUT layer state
+BRIDGES.........Start of BRIDGES sequence, follow alerts to run each command
+BRIDGES2........Moves blocks to certain layers so user can verify cable runs
+BRIDGES3........End of BRIDGES sequence, moves blocks and cable back to default layers
+EBLOCK..........Extract all ROOMID, SEGMENT and POSITION attribute information from blocks WATTSTOPPER layer to a text file inside the folder where the drawing is located
+EBLOCK2.........Same as above, this uses the previous riser extraction format
+EBLOCK3.........Same as above, this uses the previous riser extraction format
+EBLOCKRD........Same as above, for Room_Details_Extraction.txt
+EBLOCKVANTAGE...Same as above, for Vantage_Riser_Extraction.txt
+GSR.............Generate Single Line Riser from Riser_Extraction.txt generated from EBLOCK function
+GSR2............Exact same functionality as GSR, this is the previous riser
+GSR3............Exact same functionality as GSR, this is the previous riser
+GRD.............Generate Room Details Point to Point wiring from Room_Details_Extraction.txt
+GSRVANTAGE......Generate Riser with for Vantage_Riser_Extraction.txt
+LDELETE.........Seach entire drawing for blocks called Legend, delete and purge them all
+NOID............Move empty ROOM ID blocks on Wattstopper to NOID layer, then non empty ROOM ID blocks on NOID to Wattstopper
+NOID2...........Move empty any items from NOID to Wattstopper layer regardless if ROOM ID has been filled out
+MATCHATTS.......Match certain attributes chosen by user between multiple blocks.
+P1..............Polyline function for RD-DLM file.
+PDFIMPORT.......Script creator for seting up a bactch of PDF external referenced drawings. Saves drawings as "WS-1" and so on
+PDFIMPORT2......Same as above, except uses PDF names as drawing names
+PDFSCALE........Utility for scaling PDFs converted to DXF
+REPLACE.........Replaces selected regular block(s) with WattStopper Dynamic Block(s)
+RISERDRAWORDER..Sets draw order for SL-DLM file
+RISERLAYOUT.....Creates script file to copy all blocks and cable from a set of WS-Layouts into a blank file
+RISERLAYOUT2....Same as above, this uses the previous riser commands and templates from June-2017
+RISERLAYOUT3....Same as above, this uses the previous riser commands and templates from August-2016
+RISERLAYOUT4....Same as above, this uses the very first riser commands and templates from 2016
+STW.............Opens Standard Work Folder location
+UPBS............Updates all blocks on WATTSTOPPER layer to current version found anywhere in support file search path.
+VCONTROLLER.....Fills out data of blocks in Riser-Layout.dwg, also wires blocks, floor plan wiring is not authorized to send to customers, for Applications Engineers only.
+VMAIN...........Fills out data of blocks in Riser-Layout.dwg, also wires blocks, floor plan wiring is not authorized to send to customers, for Applications Engineers only.
+VRULES..........Opens list of rules coded into Vantage Riser
+WSBACK..........Bring all objects on WATTSTOPPER to back of draw order.
+WSBINDALL.......Bind all xrefs and purge unused information
+WSCABLE.........Measure all splines on _WS_MSTP layer and outputs to text file
+WSCABLE2........Measure all splines on _WS_CAT5E layer and outputs to text file
+WSCABLEALL......Measure all splines and plines on default cable layers and outputs to text file
+WSCABLEI........Measure individual spline selected by user and output length to command line
+WSCABLEM........Measure all splines and plines from client selected layer
+WSCABLEM2.......Delete all dimensions from WSCABLEM function
+WSCOUNT.........Run from Model Space -- Count all blocks on WattStopper layer
+WSCPL...........Copy all cable and blocks from default layers, used to make manual adjustments to Riser-layout.dwg
+WSCPRID.........Find all empty ROOMID blocks and copy nearest ROOMID from a filled out block into the blank one
+WSFRONT.........Bring all objects on WATTSTOPPER to front of draw order.
+WSHATCH.........Delete all solid hatch on drawing (used on PDF Conversions mostly)
+WSHATCH2........Delete all solid hatch on a selected layer in the drawing (used on PDF Conversions mostly)
+WSHLT...........Move all WATTSTOPPER blocks of a certain type to a separate layer called HIGHLIGHT
+WSHLT2..........Move all HIGHLIGHT blocks of a certain type back to WATTSTOPPER
+WSLAYCUR........Set WattStopper layer as current
+WSLAYFRZ........Freeze all layers except WATTSTOPPER
+WSLAYLOCK.......Lock all layers except WattStopper
+WSLAYOFF........Turn off layers named or selected (supports nested layers)
+WSLAYOUT........Add a WattStopper layout with title block from WATTSTOPPER.dwt
+WSLAYTHW........Thaw all layers
+WSLAYUNLOCK.....Unlock all layers
+WSLEGEND........Run from Paper Space -- Automatic creation of WattStopper legend per active sheet
+WSLEGENDCOUNT...Run from Paper Space -- Automatic creation of WattStopper legend with block counts from Model Space
+WSLEGENDCOUNTPL.Run from Paper Space -- Automatic creation of WattStopper legend with block counts from Model Space inside a polyline
+WSMTB...........Pull all attributes and values from any block -- works best on title blocks
+WSMTB2..........Paste all values into the matching attributes -- the attributes must be exactly identical
+WSNEW...........Pull all attributes and values from any block, then delete that block and purge -- this is only meant for title blocks
+WSNEW2..........Import new title block, then paste all values into the matching attributes -- the attributes must be exactly identical
+WSQUOTETOOLBOM..Create XLM export of all product blocks on WATTSTOPPER layer in current drawing.
+WSREPLACE.......Replaces selected WattStopper Dynamic Block(s) with WattStopper Dynamic Block(s), this will keep the Angle attribute
+WSREPLACE2......Replaces selected WattStopper Dynamic Block(s) with WattStopper Dynamic Block(s), this will keep the Angle1 attribute
+WSRID...........Search all blocks on WATTSTOPPER layer for a specific ROOMID attribute value.
+WSSAVEAS........Saves file with 'WS-' prefix
+WSTBEXPORT......Create text file from all attributes and values from a titleblock. Also writes revision layer states
+WSTBIMPORT......Bring data in from the title block export into any block with matching attributes. Also toggles revision layer states
+WSWP............Fixes block wipeout draw order.

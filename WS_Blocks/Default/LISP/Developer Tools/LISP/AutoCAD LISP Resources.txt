@@ -1,0 +1,27 @@
+Programming Resources
+
+AutoCAD Options 
+htp://cadpanacea.com/wp/?p=624t
+
+
+Support Path
+http://www.lee-mac.com/addremovesupportpaths.html
+
+
+;;-----------------=={ ACADDOC.lsp Creator }==----------------;;
+;;                                                            ;;
+;;  Creates, or appends to, an ACADDOC.lsp file containing    ;;
+;;  a series of load statements for all program files         ;;
+;;  (lsp/vlx/fas) found in a selected directory.              ;;
+;;------------------------------------------------------------;;
+;;  Author: Lee Mac, Copyright © 2011 - www.lee-mac.com       ;;
+;;------------------------------------------------------------;;
+;;  Version 1.1    -    25-05-2011                            ;;
+;;------------------------------------------------------------;;
+
+
+Draw Order
+SORTENDS Table
+https://forums.autodesk.com/t5/visual-lisp-autolisp-and-general/manipulate-object-draworder/m-p/1463575?nobounce=#M194279
+Modify with Array
+https://knowledge.autodesk.com/search-result/caas/CloudHelp/cloudhelp/2015/ENU/AutoCAD-ActiveX/files/GUID-45CA4C5D-5408-4EC9-98B8-18FE4DD8BC2B-htm.html

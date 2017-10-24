@@ -1,0 +1,5 @@
+	(setq *acad (vlax-get-acad-object))
+	(setq acdoc (vla-get-ActiveDocument *acad))
+
+  	(setq drawingName (vl-filename-base (vla-get-fullname acdoc)))
+	(vlax-release-object *acad acdoc)
